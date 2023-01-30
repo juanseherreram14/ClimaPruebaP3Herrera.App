@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ClimaPruebaP3Herrera.WelcomePage"
+             Title="WelcomePage"
+             BackgroundColor="#512DAB">
+    <ScrollView>
+    <StackLayout VerticalOptions="Center"
+                 Margin="20"
+                 Spacing="0">
+        <Image Source="icon_02d.png"
+               HeightRequest="200"
+               WidthRequest="200" />
+        <Label Text="App"
+               FontSize="40"
+               TextColor="#ffca28" />
+        <Label Text="de pronostico de clima. Juan Herrera"
+               FontSize="40"
+               TextColor="White" />
+        <Label Text="Revisa el clima de tu ubicacion actual o busca la ciudad que necesites"
+               TextColor="White"
+               FontSize="Small" />
+        <Button Text="Empezar"
+                FontSize="Large"
+                BackgroundColor="#ffca28"
+                WidthRequest="250"
+                Margin="0,50,0,0"
+                x:Name="BtnGetStarted" 
+                Clicked="BtnGetStarted_Clicked"/>
+    </StackLayout>
+    </ScrollView>
+</ContentPage>

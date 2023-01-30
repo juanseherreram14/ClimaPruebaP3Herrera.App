@@ -1,11 +1,25 @@
-﻿namespace ClimaPruebaP3Herrera;
+﻿using ClimaPruebaP3Herrera.Data;
+namespace ClimaPruebaP3Herrera;
 
 public partial class App : Application
 {
-	public App()
-	{
-		InitializeComponent();
+    private static WeatherDB _database;
 
-		MainPage = new AppShell();
-	}
+    public static WeatherDB Database
+    {
+        get
+        {
+            if (_database == null)
+            {
+                _database = new WeatherDB(Path.Combine(FileSystem.AppDataDirectory, "weather.db"));
+            }
+            return _database;
+        }
+    }
+    public App()
+    {
+        InitializeComponent();
+        
+        MainPage = new WelcomePage();
+    }
 }
