@@ -57,13 +57,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="CityDataPage.xaml">
+	  <MauiXaml Update="Views\CityDataPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="WeatherPage.xaml">
+	  <MauiXaml Update="Views\WeatherPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="WelcomePage.xaml">
+	  <MauiXaml Update="Views\WelcomePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
