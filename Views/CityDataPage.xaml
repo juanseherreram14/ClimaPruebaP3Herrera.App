@@ -27,12 +27,36 @@
                                         HorizontalOptions="Start"/>
                                 </VerticalStackLayout>
 
-                                <HorizontalStackLayout Grid.Column="2">
-                                    <Label FontAttributes="Bold" Text="Clima:  -" VerticalOptions="Center"/>
-                                    <Label HorizontalOptions="Start" Text="{Binding WeatherData}" VerticalOptions="Center" />
-                                </HorizontalStackLayout>
+                            <VerticalStackLayout Spacing="0" Grid.Column="2" HorizontalOptions="Center">
+                                <Label Text="{Binding WeatherData}" 
+                                        Margin="5" 
+                                        FontSize="28" 
+                                        FontFamily="Roboto-Bold"
+                                        HorizontalOptions="Start"/>
+                            </VerticalStackLayout>
+                            <VerticalStackLayout Spacing="0" Grid.Column="3" HorizontalOptions="Center">
+                                <Label Text="{Binding Observacion }" 
+                                        Margin="5" 
+                                        FontSize="28" 
+                                        FontFamily="Roboto-Bold"
+                                        HorizontalOptions="Start"/>
+                            </VerticalStackLayout>
 
-                            </Grid>
+                            <HorizontalStackLayout Grid.Column="0">
+                                <Label FontAttributes="Bold" Text="Numero:  " VerticalOptions="Center"/>
+                            </HorizontalStackLayout>
+                            <HorizontalStackLayout Grid.Column="1">
+                                <Label FontAttributes="Bold" Text="Ciudad:  " VerticalOptions="Center"/>
+                            </HorizontalStackLayout>
+                            <HorizontalStackLayout Grid.Column="2">
+                                    <Label FontAttributes="Bold" Text="Clima:  " VerticalOptions="Center"/>
+                            </HorizontalStackLayout>
+
+                            <HorizontalStackLayout Grid.Column="3">
+                                <Label FontAttributes="Bold" Text="Observacion:  " VerticalOptions="Center"/>
+                            </HorizontalStackLayout>
+
+                        </Grid>
                         </VerticalStackLayout>
 
                     </DataTemplate>

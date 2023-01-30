@@ -57,7 +57,8 @@ public partial class WeatherPage : ContentPage
     private async void ImageButton_Clicked(object sender, EventArgs e)
     {
         
-        var response = await DisplayPromptAsync(title: "", message: "", placeholder: "Buscar Clima por ciudad", accept: "Buscar", cancel: "Cancelar");
+        var response = await DisplayPromptAsync(title: "", message: "", placeholder: "Buscar Clima por ciudad", accept: "Buscar", cancel: "Cancel");
+        var observacion = await DisplayPromptAsync(title: "", message: "", placeholder: "Ingresa Una Observacion", accept: "Guardar", cancel: "Cancel");
         var result = await APIService.GetWeatherByCity(response);
         if (response != null)
         {
@@ -65,7 +66,8 @@ public partial class WeatherPage : ContentPage
             App.Database.AddNewCity(new CityData
             {
                 Name = response,
-                WeatherData = result.list[0].main.temperatura + "°C"
+                WeatherData = result.list[0].main.temperatura + "°C",
+                Observacion = observacion
             });
         }
     }
